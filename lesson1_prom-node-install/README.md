@@ -1,5 +1,6 @@
 # Зберегти у файл, набір команд якими встановлювали Prometheus та Node Exporter
 Встановив за допомогою docker для простоти відтворення - [docker-compose.yml](docker-compose.yml)
+Перша спроба з окремими контейнерами не вдалася, оскільки prometheus не міг підключитися до node-exporter через network_mode: host. Після цього зібрав все разом через docker-compose.yml.
 
 # Надати список метрик які показують використання CPU на вашій ОС
 Дві метрики:
@@ -45,3 +46,7 @@ scrape_configs:
       - targets: ["localhost:9100"]
 
 ```
+
+# Screen recording
+Провсяк випадок зробив запис екрана, вийшло трохи messy але весь процес.
+[![asciicast](https://asciinema.org/a/vJJTHCTuVlfYfr1sbxJ4S5qMk.svg)](https://asciinema.org/a/vJJTHCTuVlfYfr1sbxJ4S5qMk)
